@@ -6,6 +6,8 @@ A visitor submits a ticket, Gemini classifies it and retrieves relevant policies
 
 > Built by **John Venancio — AI Automation Developer**
 
+[Live demo](https://replypilot-support.vercel.app) · [Case study](https://replypilot-support.vercel.app/case-study) · [Interactive workflow](https://replypilot-support.vercel.app/demo)
+
 ## What it proves
 
 - A complete business workflow, not a static AI mockup

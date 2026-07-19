@@ -148,12 +148,12 @@ export default function Home() {
       <section className="section walkthrough-section" id="walkthrough">
         <div className="shell walkthrough-grid">
           <div className="video-frame">
-            <video controls preload="metadata" poster="/replypilot-walkthrough-poster.svg">
+            <video controls preload="metadata" poster="/replypilot-walkthrough-poster.webp">
               <source src="/replypilot-walkthrough.mp4" type="video/mp4" />
               <track kind="captions" src="/replypilot-walkthrough.vtt" srcLang="en" label="English" />
               Your browser does not support embedded video.
             </video>
-            <span className="video-label"><Play size={15} /> 90-second product walkthrough</span>
+            <span className="video-label"><Play size={15} /> 1-minute product walkthrough</span>
           </div>
           <div className="walkthrough-copy"><span className="eyebrow">SEE REAL ACTIONS</span><h2>Watch the full workflow, not a slideshow.</h2><p>The walkthrough shows the cursor filling the form, AI processing the ticket, a human editing and approving the draft, and the final email being sent.</p><ul className="check-list"><li><Check /> Visible cursor and form filling</li><li><Check /> Real approval interaction</li><li><Check /> Human-sounding explanation</li></ul><Link className="text-link" href="/demo">Skip the video and try it <ArrowRight size={17} /></Link></div>
         </div>

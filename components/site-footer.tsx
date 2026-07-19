@@ -21,7 +21,7 @@ export function SiteFooter() {
           <a href="mailto:johnvenancio30@gmail.com">
             <Mail size={16} /> Contact John
           </a>
-          <a href="https://github.com/johnvenancio30-bit" target="_blank" rel="noreferrer">
+          <a href="https://github.com/johnvenancio30-bit/replypilot-ai-support" target="_blank" rel="noreferrer">
             <Code2 size={16} /> GitHub
           </a>
         </div>
