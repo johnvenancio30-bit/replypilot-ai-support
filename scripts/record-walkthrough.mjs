@@ -20,12 +20,13 @@ async function overlay(label) {
     const root = document.createElement("div");
     root.id = "walkthrough-overlay";
     root.innerHTML = `<style>
-      #walkthrough-cursor{position:fixed;z-index:2147483647;left:0;top:0;width:28px;height:36px;pointer-events:none;filter:drop-shadow(0 3px 3px rgba(31,15,51,.35));transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+      #walkthrough-cursor{position:fixed;z-index:2147483647;left:0;top:0;width:28px;height:36px;pointer-events:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.65));transition:transform .32s cubic-bezier(.2,.8,.2,1)}
       #walkthrough-cursor svg{width:100%;height:100%}
-      #walkthrough-label{position:fixed;z-index:2147483646;right:25px;top:90px;max-width:380px;padding:11px 14px;color:#4c1d95;border:1px solid #d8c8ea;border-radius:11px;background:rgba(255,255,255,.96);box-shadow:0 14px 34px rgba(76,29,149,.16);font:700 13px/1.3 Arial,sans-serif}
-      #walkthrough-ripple{position:fixed;z-index:2147483645;width:18px;height:18px;margin:-9px;border:3px solid #7c3aed;border-radius:50%;opacity:0;pointer-events:none}
+      #walkthrough-label{position:fixed;z-index:2147483646;right:25px;top:90px;max-width:380px;padding:11px 14px;color:#e2e8f0;border:1px solid rgba(34,211,238,.34);border-radius:12px;background:rgba(7,11,24,.94);box-shadow:0 18px 42px rgba(0,0,0,.45),0 0 0 1px rgba(124,58,237,.12);font:700 13px/1.3 Arial,sans-serif;backdrop-filter:blur(12px)}
+      #walkthrough-label::before{display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:50%;background:#22d3ee;box-shadow:0 0 0 5px rgba(34,211,238,.12);content:''}
+      #walkthrough-ripple{position:fixed;z-index:2147483645;width:18px;height:18px;margin:-9px;border:3px solid #22d3ee;border-radius:50%;opacity:0;pointer-events:none}
       #walkthrough-ripple.go{animation:ripple .55s ease-out}@keyframes ripple{0%{opacity:.9;transform:scale(.55)}100%{opacity:0;transform:scale(3)}}
-    </style><div id="walkthrough-label"></div><div id="walkthrough-ripple"></div><div id="walkthrough-cursor"><svg viewBox="0 0 30 38"><path d="M3 2.5V30l7.5-6.6 5.2 11.2 5.7-2.7-5.2-10.8 9.8-.6L3 2.5Z" fill="white" stroke="#4c1d95" stroke-width="2.5" stroke-linejoin="round"/></svg></div>`;
+    </style><div id="walkthrough-label"></div><div id="walkthrough-ripple"></div><div id="walkthrough-cursor"><svg viewBox="0 0 30 38"><path d="M3 2.5V30l7.5-6.6 5.2 11.2 5.7-2.7-5.2-10.8 9.8-.6L3 2.5Z" fill="white" stroke="#22d3ee" stroke-width="2.5" stroke-linejoin="round"/></svg></div>`;
     document.body.appendChild(root);
     document.querySelector("#walkthrough-label").textContent = text;
     document.querySelector("#walkthrough-cursor").style.transform = "translate(1120px,620px)";
@@ -105,11 +106,11 @@ await wait(4200);
 await page.evaluate(() => {
   document.querySelector("#walkthrough-overlay")?.remove();
   const outro = document.createElement("section");
-  outro.style.cssText = "position:fixed;z-index:2147483647;inset:0;display:grid;place-items:center;color:#201137;background:radial-gradient(circle at 50% 5%,#e7d5ff,transparent 38%),linear-gradient(135deg,#fcfaff,#f2e9ff);font-family:Arial,sans-serif";
-  outro.innerHTML = `<div style="width:min(720px,calc(100% - 70px));padding:58px;text-align:center;border:1px solid #d9c6ef;border-radius:28px;background:rgba(255,255,255,.9);box-shadow:0 30px 80px rgba(70,30,110,.18)"><div style="font-size:18px;font-weight:800;color:#6d28d9">ReplyPilot</div><p style="margin:26px 0 8px;color:#76528f;font-size:13px;font-weight:700;letter-spacing:.14em">BUILT BY</p><h2 style="margin:0;font-size:43px;letter-spacing:-.04em">John Venancio —</h2><p style="margin:10px 0 30px;color:#684b7b;font-size:21px">AI Automation Developer</p><div style="display:flex;justify-content:center;gap:12px"><span style="padding:14px 28px;color:white;border-radius:12px;background:#6d28d9;font-weight:700">Try the demo</span><span style="padding:14px 28px;color:#4c1d95;border:1px solid #d6c4e9;border-radius:12px;background:white;font-weight:700">Contact me</span></div></div>`;
+  outro.style.cssText = "position:fixed;z-index:2147483647;inset:0;display:grid;place-items:center;color:#f8fafc;background:radial-gradient(circle at 18% 8%,rgba(124,58,237,.30),transparent 36%),radial-gradient(circle at 85% 92%,rgba(34,211,238,.15),transparent 34%),linear-gradient(135deg,#050814,#0a1022);font-family:Arial,sans-serif";
+  outro.innerHTML = `<div style="width:min(720px,calc(100% - 70px));padding:58px;text-align:center;border:1px solid rgba(124,58,237,.34);border-radius:28px;background:rgba(10,16,34,.88);box-shadow:0 34px 90px rgba(0,0,0,.52),inset 0 1px 0 rgba(255,255,255,.05);backdrop-filter:blur(16px)"><div style="font-size:18px;font-weight:800;color:#67e8f9">ReplyPilot</div><p style="margin:26px 0 8px;color:#a78bfa;font-size:13px;font-weight:700;letter-spacing:.14em">BUILT BY</p><h2 style="margin:0;color:#f8fafc;font-size:43px;letter-spacing:-.04em">John Venancio —</h2><p style="margin:10px 0 30px;color:#aab5c8;font-size:21px">AI Automation Developer</p><div style="display:flex;justify-content:center;gap:12px"><span style="padding:14px 28px;color:white;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#6d28d9);font-weight:700;box-shadow:0 12px 28px rgba(124,58,237,.32)">Try the demo</span><span style="padding:14px 28px;color:#67e8f9;border:1px solid rgba(34,211,238,.34);border-radius:12px;background:#0b1328;font-weight:700">Contact me</span></div></div>`;
   document.body.appendChild(outro);
 });
-await wait(6500);
+await wait(17500);
 
 const video = page.video();
 await context.close();
