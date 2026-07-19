@@ -9,12 +9,12 @@ export function SiteFooter() {
         <div>
           <Brand />
           <p className="footer-copy">
-            AI-powered customer support with human judgment built into every reply.
+            AI prepares customer replies. A person approves before anything sends.
           </p>
         </div>
         <div className="footer-links">
-          <Link href="/demo">Live demo</Link>
-          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/demo">Try the demo</Link>
+          <Link href="/#how-it-works">How it works</Link>
           <Link href="/case-study">Case study</Link>
         </div>
         <div className="footer-links">

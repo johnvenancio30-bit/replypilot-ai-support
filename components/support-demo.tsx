@@ -272,13 +272,13 @@ export function SupportDemo() {
     <div className="demo-form-layout">
       <aside className="demo-guide">
         <span className="eyebrow">STEP 1 OF 4</span>
-        <h2>Start with a real customer question.</h2>
-        <p>Choose a sample scenario or enter your own demo information. Please do not include sensitive personal data.</p>
+        <h2>Choose a customer question.</h2>
+        <p>For the fastest demo, select a sample below. ReplyPilot fills the form for you.</p>
         <div className="scenario-list">
           <span>QUICK SCENARIOS</span>
           {scenarios.map((scenario) => <button type="button" key={scenario.label} onClick={() => setInput({ ...emptyInput, ...scenario.data })}><MessageSquareText /><span><b>{scenario.label}</b><small>Fill the form automatically</small></span><ArrowRight /></button>)}
         </div>
-        <div className="guide-promise"><ShieldCheck /><div><b>What happens next</b><p>AI analyzes the request, retrieves relevant policy, drafts a reply, and stops for your approval.</p></div></div>
+        <div className="guide-promise"><ShieldCheck /><div><b>What happens next</b><p>AI prepares a reply. You review it before anything sends.</p></div></div>
       </aside>
       <form className="ticket-form" onSubmit={submitTicket}>
         <div className="form-heading"><div><span>New support request</span><small>All fields marked * are required</small></div><span className="secure-label"><ShieldCheck /> Demo-safe</span></div>

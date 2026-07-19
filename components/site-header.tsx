@@ -3,8 +3,8 @@ import { Menu } from "lucide-react";
 import { Brand } from "@/components/brand";
 
 const nav = [
-  { href: "/demo", label: "Live demo" },
-  { href: "/dashboard", label: "Dashboard" },
+  { href: "/#how-it-works", label: "How it works" },
+  { href: "/#walkthrough", label: "Watch demo" },
   { href: "/case-study", label: "Case study" },
 ];
 
@@ -22,7 +22,7 @@ export function SiteHeader() {
         </nav>
         <div className="header-actions">
           <Link className="button button-primary button-small desktop-cta" href="/demo">
-            Try the workflow
+            Try the demo
           </Link>
           <details className="mobile-menu">
             <summary aria-label="Open navigation menu">

@@ -7,9 +7,9 @@
 ---
 
 **Project:** ReplyPilot
-**Generated:** 2026-07-19 07:19:42
-**Category:** Micro SaaS
-**Design Dials:** Variance 6/10 (Balanced / Modern) | Motion 5/10 (Standard) | Density 6/10 (Standard)
+**Generated:** 2026-07-19 08:27:11
+**Category:** AI/Chatbot Platform
+**Design Dials:** Variance 3/10 (Centered / Minimal) | Motion 2/10 (Subtle) | Density 3/10 (Spacious)
 
 ---
 
@@ -34,29 +34,29 @@
 
 ### Typography
 
-- **Heading Font:** Plus Jakarta Sans
-- **Body Font:** Plus Jakarta Sans
-- **Mood:** enterprise, saas, b2b, professional, indigo, modern, approachable, legible, ios dynamic type, android scaling
-- **Google Fonts:** [Plus Jakarta Sans + Plus Jakarta Sans](https://fonts.google.com/share?selection.family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400)
+- **Heading Font:** Archivo
+- **Body Font:** Space Grotesk
+- **Mood:** minimal, portfolio, designer, creative, clean, artistic
+- **Google Fonts:** [Archivo + Space Grotesk](https://fonts.google.com/share?selection.family=Archivo:wght@300;400;500;600;700|Space+Grotesk:wght@300;400;500;600;700)
 
 **CSS Import:**
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 ```
 
 ### Spacing Variables
 
-*Density: 6/10 — Standard*
+*Density: 3/10 — Spacious*
 
 | Token | Value | Usage |
 |-------|-------|-------|
 | `--space-xs` | `4px` / `0.25rem` | Tight gaps |
 | `--space-sm` | `8px` / `0.5rem` | Icon gaps, inline spacing |
-| `--space-md` | `16px` / `1rem` | Standard padding |
-| `--space-lg` | `24px` / `1.5rem` | Section padding |
-| `--space-xl` | `32px` / `2rem` | Large gaps |
-| `--space-2xl` | `48px` / `3rem` | Section margins |
-| `--space-3xl` | `64px` / `4rem` | Hero padding |
+| `--space-md` | `24px` / `1.5rem` | Standard padding |
+| `--space-lg` | `32px` / `2rem` | Section padding |
+| `--space-xl` | `48px` / `3rem` | Large gaps |
+| `--space-2xl` | `64px` / `4rem` | Section margins |
+| `--space-3xl` | `96px` / `6rem` | Hero padding |
 
 ### Shadow Depths
 
@@ -161,45 +161,44 @@
 
 ## Style Guidelines
 
-**Style:** Soft UI Evolution
+**Style:** Exaggerated Minimalism
 
-**Keywords:** Evolved soft UI, better contrast, modern aesthetics, subtle depth, accessibility-focused, improved shadows, hybrid
+**Keywords:** Bold minimalism, oversized typography, high contrast, negative space, loud minimal, statement design
 
-**Best For:** Modern enterprise apps, SaaS platforms, health/wellness, modern business tools, professional, hybrid
+**Best For:** Fashion, architecture, portfolios, agency landing pages, luxury brands, editorial
 
-**Key Effects:** Improved shadows (softer than flat, clearer than neumorphism), modern (200-300ms), focus visible, WCAG AA/AAA
+**Key Effects:** font-size: clamp(3rem 10vw 12rem), font-weight: 900, letter-spacing: -0.05em, massive whitespace
 
 ### Page Pattern
 
-**Pattern Name:** Portfolio Grid
+**Pattern Name:** Minimal Single Column
 
-- **Conversion Strategy:** Visuals first. Filter by category. Fast loading essential.
-- **CTA Placement:** Project Card Hover + Footer Contact
-- **Section Order:** 1. Hero (Name/Role), 2. Project Grid (Masonry), 3. About/Philosophy, 4. Contact
+- **Conversion Strategy:** Single CTA focus. Large typography. Lots of whitespace. No nav clutter. Mobile-first.
+- **CTA Placement:** Center, large CTA button
+- **Section Order:** 1. Hero headline, 2. Short description, 3. Benefit bullets (3 max), 4. CTA, 5. Footer
 
 ---
 
 ## Motion
 
-**Page Transition** (Standard) — Trigger: route change | Duration: 400-600ms | Easing: `power2.inOut`
+**Page Transition** (Subtle) — Trigger: route change | Duration: 200-300ms | Easing: `power1.inOut`
 
 ```js
-const tl = gsap.timeline(); tl.to('.transition-overlay', { yPercent: 0, duration: 0.4, ease: 'power2.inOut' }).call(navigate).to('.transition-overlay', { yPercent: -100, duration: 0.4, ease: 'power2.inOut', delay: 0.1 });
+gsap.to(main, { opacity: 0, duration: 0.2, onComplete: () => { navigate(); gsap.fromTo(main, { opacity: 0 }, { opacity: 1, duration: 0.2 }); } });
 ```
 
-**Framework notes:** Keep the overlay element mounted at the layout root (outside the page component) so it survives the route swap
+**Framework notes:** Pair with the router's transition hooks (Next.js App Router transitions, React Router's useNavigate, Vue Router's beforeEach/afterEach)
 
-- ✅ Show a lightweight loading indicator if the destination route's data fetch outlasts the overlay
-- ❌ Don't tie the overlay's reveal directly to data-fetch completion without a max-wait timeout; a slow API stalls the whole transition
-- ⚡ Prefer CSS transform (yPercent) over top/left to keep the overlay animation on the compositor thread
+- ✅ Preload the destination route's critical assets before the exit tween finishes
+- ❌ Don't block navigation on animation; cap exit duration at ~250ms so the app never feels unresponsive
+- ⚡ Exit animation should always resolve faster than entrance (asymmetric timing) so back/forward feels snappy
 
 ---
 
 ## Anti-Patterns (Do NOT Use)
 
-- ❌ Static design
-- ❌ No video
-- ❌ Poor mobile
+- ❌ Heavy chrome
+- ❌ Slow response feedback
 
 ### Additional Forbidden Patterns
 
