@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ReplyPilot workflow video</title>
+  <desc id="desc">A support dashboard showing a ticket, AI analysis and a human approval action.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#160c2b"/><stop offset="1" stop-color="#42218d"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1300" cy="120" r="360" fill="#7c3aed" opacity=".18"/>
+  <rect x="170" y="110" width="1260" height="680" rx="30" fill="#fff" opacity=".97"/>
+  <rect x="170" y="110" width="1260" height="70" rx="30" fill="#f8f5ff"/><circle cx="220" cy="145" r="10" fill="#fda4af"/><circle cx="252" cy="145" r="10" fill="#fcd34d"/><circle cx="284" cy="145" r="10" fill="#86efac"/>
+  <rect x="220" y="230" width="310" height="470" rx="24" fill="#f8f5ff"/><rect x="570" y="230" width="810" height="180" rx="24" fill="#f8f5ff"/><rect x="570" y="445" width="810" height="255" rx="24" fill="#fff" stroke="#e9ddff" stroke-width="3"/>
+  <rect x="620" y="485" width="260" height="26" rx="13" fill="#ddd1f7"/><rect x="620" y="535" width="660" height="17" rx="8" fill="#e8e1f3"/><rect x="620" y="570" width="590" height="17" rx="8" fill="#e8e1f3"/><rect x="620" y="605" width="430" height="17" rx="8" fill="#e8e1f3"/>
+  <rect x="1120" y="645" width="210" height="55" rx="16" fill="url(#accent)"/>
+  <circle cx="800" cy="450" r="88" fill="url(#accent)"/><path d="M780 410l70 40-70 40z" fill="#fff"/>
+  <text x="800" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#201137">See the real ReplyPilot workflow</text>
+</svg>

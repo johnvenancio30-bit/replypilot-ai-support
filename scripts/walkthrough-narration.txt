@@ -1,0 +1,13 @@
+Here is ReplyPilot. Let’s follow one real support question from the moment it arrives.
+
+The customer shares their contact details, order number, and what went wrong.
+
+ReplyPilot reads the request, identifies the category, urgency, and sentiment, then searches the company knowledge base for the right policy.
+
+It prepares a professional response and shows the sources it used—but nothing is sent automatically.
+
+A human can review every word, make changes, reject the draft, or generate another version. Only approval unlocks the send action.
+
+The approved email is delivered, and every step stays visible in the support dashboard. That means faster responses, consistent answers, and full control over every customer conversation.
+
+I’m John Venancio, an AI Automation Developer. Try the live demo, or contact me to discuss an automation for your business.
