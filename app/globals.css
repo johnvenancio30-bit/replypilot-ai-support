@@ -193,6 +193,15 @@ h1, h2, h3 { line-height: 1.12; letter-spacing: -0.035em; }
 .simple-video-link svg { fill: #ede5fb; }
 .simple-video-link:hover { color: var(--color-primary); }
 .simple-trust-row { margin-top: 22px; }
+.benchmark-section { padding: 40px 0 30px; background: white; }
+.benchmark-card { display: grid; grid-template-columns: 1.25fr repeat(3, 1fr); align-items: center; border: 1px solid var(--color-border); border-radius: 20px; background: #fdfcff; box-shadow: var(--shadow-sm); }
+.benchmark-intro { padding: 26px 30px; }
+.benchmark-intro h2 { margin: 7px 0 4px; font-size: 1.25rem; }
+.benchmark-intro p { margin: 0; color: var(--color-subtle); font-size: .76rem; }
+.benchmark-metric { min-height: 108px; display: flex; flex-direction: column; justify-content: center; padding: 22px 26px; border-left: 1px solid var(--color-border); }
+.benchmark-metric strong { color: var(--color-primary-dark); font-size: clamp(1.45rem, 2.5vw, 2rem); letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.benchmark-metric span { margin-top: 3px; color: var(--color-subtle); font-size: .72rem; line-height: 1.45; }
+.benchmark-note { margin-top: 10px; margin-bottom: 0; color: #82768c; text-align: right; font-size: .66rem; }
 .simple-section-heading { margin-bottom: 42px; }
 .simple-section-heading h2 { max-width: 780px; margin-inline: auto; }
 .simple-how-section { background: white; }
@@ -273,7 +282,7 @@ h1, h2, h3 { line-height: 1.12; letter-spacing: -0.035em; }
   .demo-form-layout, .review-grid { grid-template-columns: 1fr; }.demo-guide { display: grid; grid-template-columns: 1fr 1fr; gap: 0 35px; }.demo-guide > .eyebrow, .demo-guide > h2, .demo-guide > p { grid-column: 1; }.scenario-list { grid-column: 2; grid-row: 1 / span 4; margin-top: 0; }.guide-promise { grid-column: 1; }.ticket-context { border-right: 0; border-bottom: 1px solid var(--color-border); }.review-grid { min-height: 0; }
   .metric-grid { grid-template-columns: 1fr 1fr; }.dashboard-grid { grid-template-columns: 1fr; }.inspector-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }.inspector-head, .inspector-summary, .next-action, .inspector-cta { grid-column: 1/-1; }.analytics-grid { grid-template-columns: 1fr; }
   .case-flow { grid-template-columns: repeat(5,1fr); }.case-flow > svg { display: none; }.case-intro-grid, .safety-grid { gap: 55px; }
-  .simple-hero-grid { grid-template-columns: 1fr; }.simple-hero-copy { max-width: 760px; }.simple-steps { grid-template-columns: repeat(2, 1fr); }
+  .simple-hero-grid { grid-template-columns: 1fr; }.simple-hero-copy { max-width: 760px; }.simple-steps { grid-template-columns: repeat(2, 1fr); }.benchmark-card { grid-template-columns: 1fr repeat(3, 1fr); }.benchmark-intro { grid-column: 1/-1; border-bottom: 1px solid var(--color-border); }.benchmark-intro + .benchmark-metric { border-left: 0; }
 }
 
 @media (max-width: 760px) {
@@ -281,7 +290,7 @@ h1, h2, h3 { line-height: 1.12; letter-spacing: -0.035em; }
   .page-hero { padding: 62px 0 44px; }.page-hero h1 { font-size: 2.65rem; }.demo-shell { padding-top: 25px; }.demo-guide { display: block; padding: 25px; }.scenario-list { margin-top: 25px; }.ticket-form { padding: 23px; }.form-grid.two-columns { grid-template-columns: 1fr; gap: 0; }.form-submit { display: grid; }.form-submit .button { width: 100%; }.workflow-progress { justify-content: flex-start; gap: 7px; overflow-x: auto; }.workflow-progress > i { width: 25px; flex: 0 0 25px; }.workflow-progress > span { flex: 0 0 auto; }.ticket-context, .reply-editor { padding: 22px; }.editor-heading { display: grid; }.editor-heading h2 { margin-bottom: 4px; }.model-chip { margin-bottom: 14px; }.editor-actions { display: grid; grid-template-columns: 1fr 1fr; }.editor-actions .button-primary { grid-column: 1/-1; }.editor-actions .button { width: 100%; }.portfolio-safety { justify-content: flex-start; }.success-actions { display: grid; width: 100%; max-width: 330px; }.success-receipt { grid-template-columns: 1fr; }.success-receipt > span { border-bottom: 1px solid var(--color-border); }.success-receipt > span:last-child { border-bottom: 0; }
   .dashboard-page { padding-top: 40px; }.dashboard-heading { display: grid; }.dashboard-heading-actions { justify-content: space-between; }.metric-grid { grid-template-columns: 1fr; }.queue-table > button { grid-template-columns: 1fr auto; gap: 8px; }.queue-summary { grid-column: 1/-1; padding-left: 41px; }.inspector-panel { display: block; }.analytics-grid { grid-template-columns: 1fr; }
   .case-stats .shell { grid-template-columns: 1fr 1fr; }.case-stats span:nth-child(2) { border-right: 0; }.case-stats span:nth-child(-n+2) { border-bottom: 1px solid var(--color-border); }.case-intro-grid, .safety-grid { grid-template-columns: 1fr; gap: 35px; }.case-flow { grid-template-columns: 1fr; }.case-flow article { min-height: auto; }.decision-grid, .stack-grid { grid-template-columns: 1fr; }.case-cta .shell { display: block; padding-top: 60px; padding-bottom: 60px; }.case-cta .button { width: 100%; margin-top: 28px; }
-  .simple-hero { padding-top: 58px; padding-bottom: 72px; }.simple-hero-grid { gap: 42px; }.simple-hero-copy h1 { font-size: clamp(2.45rem, 11vw, 3.5rem); }.simple-video-link { justify-content: center; }.simple-steps, .simple-benefits { grid-template-columns: 1fr; }.simple-step { min-height: auto; }.simple-benefit { padding: 25px; }.simple-walkthrough-grid { gap: 38px; }
+  .simple-hero { padding-top: 58px; padding-bottom: 72px; }.simple-hero-grid { gap: 42px; }.simple-hero-copy h1 { font-size: clamp(2.45rem, 11vw, 3.5rem); }.simple-video-link { justify-content: center; }.simple-steps, .simple-benefits { grid-template-columns: 1fr; }.simple-step { min-height: auto; }.simple-benefit { padding: 25px; }.simple-walkthrough-grid { gap: 38px; }.benchmark-section { padding: 28px 0 20px; }.benchmark-card { grid-template-columns: 1fr; }.benchmark-intro { padding: 24px; }.benchmark-metric { min-height: 0; display: grid; grid-template-columns: 108px 1fr; align-items: center; gap: 14px; padding: 18px 24px; border-top: 1px solid var(--color-border); border-left: 0; }.benchmark-intro + .benchmark-metric { border-top: 0; }.benchmark-metric span { margin: 0; }.benchmark-note { text-align: left; line-height: 1.5; }
 }
 
 @media (max-width: 420px) {

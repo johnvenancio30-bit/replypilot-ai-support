@@ -90,6 +90,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="benchmark-section" aria-labelledby="benchmark-title">
+        <div className="shell benchmark-card">
+          <div className="benchmark-intro">
+            <span className="eyebrow">DEMO BENCHMARK</span>
+            <h2 id="benchmark-title">Working proof, not a mockup.</h2>
+            <p>Results from the live portfolio workflow.</p>
+          </div>
+          <div className="benchmark-metric">
+            <strong>&lt; 10 sec</strong>
+            <span>Typical AI preparation</span>
+          </div>
+          <div className="benchmark-metric">
+            <strong>~8 min</strong>
+            <span>Estimated work saved per ticket</span>
+          </div>
+          <div className="benchmark-metric">
+            <strong>100%</strong>
+            <span>Human approval before sending</span>
+          </div>
+        </div>
+        <p className="shell benchmark-note">
+          Portfolio demo benchmark. Time saved is an estimate, not client production data.
+        </p>
+      </section>
+
       <section className="section simple-how-section" id="how-it-works">
         <div className="shell">
           <div className="section-heading centered simple-section-heading">
